@@ -1,0 +1,41 @@
+Column,Data description,Notes
+A,Region,Western Cape (WC) only
+B,Site name,"Basically where the device is located that pulled the data - Zone; inbound (IB)/outbound(outbound); DS = Datasite, WTRNX = Wavetronix"
+C,Date of Collection Period,Date of Collection Period
+D,Hour of Collection Period,"Hour of Collection Period; 0 – midniight, 1 – 1am, 2 – 2am, etc"
+E,Vehicle Class Type,
+F,Total Count of Vehicle Class,
+G,Average Speed,
+,,
+,,
+Field Name,Type,Description
+Site_Name,varchar,Data site name
+Collection_Data_Local,date,Collection period date (local SA time)
+Collection_Hour_Local,int,Collection period hour (local SA time)
+Collection_10MinBin_Local,int,"Collection period 10 min bin - i.e.: 0 = 00:00 to 00:09, 1 = 00:10 to 0:19 (local SA time)"
+LnNum,int,Lane number as configuredin ATMS
+LnType,int,Lane type as configured in ATMS (see appendix 1 below)
+VehClass,int,Vehicle classification (see appendix 2 below)
+TotalVehClassCount,int,Total vehicle count for this classification
+AverageLaneOccupancyPercentage,float,Average occupancy for the lane (not per vehicle classification)
+AverageLaneSpeedKph,float,Average speed in Kph for the lane (not per vehicle classification)
+TotalLaneVolume,int,Total vehicle count for lane across all vehicle classifications
+,,
+LnNum Values,,
+0,Unknown,
+1,Travel,
+2,Shoulder,
+3,Median,
+4,Entry,
+5,Exit,
+6,HighOccupancyVehicle,
+7,HighOccupancyToll,
+8,Contraflow,
+9,RunningShoulder,
+10,Transfer,
+11,RightOfWay,
+,,
+VehClass Values,,
+1,Light Vehicles,
+2,Small Goods Vehicles,
+3,Medium and Large Vehicles,
